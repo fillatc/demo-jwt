@@ -1,0 +1,23 @@
+# Internationalization
+spring:
+  messages:
+    basename: messages/messages
+
+application:
+  auth:
+    token-secret: secret
+    token-issuer: my-app
+    access-token:
+      cookie-name: accessToken
+      expiration: 15 #min
+    refresh-token:
+      cookie-name: refreshToken
+      expiration: 1440 #24h
+    cookie:
+      with-fingerprint: false
+      prefix-enabled: false
+      http-only: false
+      secure: false
+      same-site:
+      path:
+      domain:

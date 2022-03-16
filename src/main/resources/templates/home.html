@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body})}"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<body>
+
+<div class="e-container">
+    <h2 th:text="#{page.home.title}">Home</h2>
+
+    <div class="e-card profile" style="width:20rem;">
+        <!-- Your color -->
+        <div class="e-card-cover primary">
+            <!-- Or image, <img src="..." alt="" -->
+        </div>
+        <div class="e-card-photo">
+            <img src="..." alt="">
+        </div>
+        <p class="card-body">
+        <h3 class="card-title text-center text-dark">
+            <p sec:authentication="name"></p>
+        </h3>
+        <p class="card-text text-center">
+            <small th:text="#{page.home.user.roles}">Authenticated user roles:</small><small sec:authentication="principal.authorities"></small>
+        </p>
+        <hr>
+        <p class="card-text text-center">
+        <p>Spring Security:</p>
+        <p sec:authorize="hasRole('USER')" th:text="#{page.home.user}">Text visible to user.</p>
+        <p sec:authorize="hasRole('ADMIN')" th:text="#{page.home.admin}">Text visible to admin.</p>
+        <p sec:authorize="isAuthenticated()"  th:text="#{page.home.authenticated}">Text visible only to authenticated users.</p>
+        </p>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

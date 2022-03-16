@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body})}">
+<body>
+
+<form class="e-form-box" style="max-width:410px;" th:action="@{/login}" method="post">
+
+  <div class="e-form-group">
+    <label for="login" th:text="#{page.login.login}">Login</label>:
+    <input class="e-control" type="text" id="login" name="login" autofocus="autofocus"/>
+  </div>
+
+  <div class="e-form-group">
+    <label for="password" th:text="#{page.login.password}">Password</label>:
+    <input class="e-control" type="password" id="password" name="password"/>
+  </div>
+
+  <div class="e-form-group">
+    <input class="e-btn primary fullwidth" type="submit" value="Log in" th:value="#{page.login.submit}"/>
+  </div>
+
+</form>
+
+</body>
+</html>

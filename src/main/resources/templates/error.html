@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body})}">
+<body>
+
+<div class="e-container">
+    <div class="e-box" style="max-width: 500px">
+
+        <h2 class="text-danger" th:text="#{page.error.error}">Error:</h2>
+        <div class="e-cols align-start">
+            <div class="e-col-3">
+                <p th:text="#{page.error.path}">Path: </p>
+            </div>
+            <div class="e-col-9">
+                <p th:text="${path}"></p>
+            </div>
+        </div>
+
+        <div class="e-cols align-start">
+            <div class="e-col-3">
+                <p th:text="#{page.error.status}">Status: </p>
+            </div>
+            <div class="e-col-9">
+                <p th:text="${status}"></p>
+            </div>
+        </div>
+
+        <div class="e-cols align-start">
+            <div class="e-col-3">
+                <p th:text="#{page.error.timestamp}">Timestamp: </p>
+            </div>
+            <div class="e-col-9">
+                <p th:text="${timestamp}"></p>
+            </div>
+        </div>
+
+        <div class="e-cols align-start">
+            <div class="e-col-3">
+                <p th:text="#{page.error.error}">Error: </p>
+            </div>
+            <div class="e-col-9">
+                <p th:text="${error}">Exception error</p>
+            </div>
+        </div>
+
+        <div class="e-cols align-start">
+            <div class="e-col-3">
+                <p th:text="#{page.error.message}">Message: </p>
+            </div>
+            <div class="e-col-9">
+                <p th:text="${message}">Exception message</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>
