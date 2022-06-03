@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.6.7</version>
+    <version>2.7.0</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.example</groupId>
@@ -17,8 +17,8 @@
 
   <properties>
     <java.version>17</java.version>
-    <java-jwt.version>3.18.3</java-jwt.version>
-    <owasp-dependency-check.version>7.0.4</owasp-dependency-check.version>
+    <java-jwt.version>3.19.2</java-jwt.version>
+    <owasp-dependency-check.version>7.1.0</owasp-dependency-check.version>
 
     <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
     <maven-surfire-plugin.version>3.0.0-M6</maven-surfire-plugin.version>
@@ -94,7 +94,7 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
+        <artifactId>maven-urefire-plugin</artifactId>
         <version>${maven-surfire-plugin.version}</version>
       </plugin>
     </plugins>
